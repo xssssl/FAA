@@ -55,6 +55,7 @@ ROBOTSTXT_OBEY = False
 DOWNLOADER_MIDDLEWARES = {
 #    'FAA.middlewares.FaaDownloaderMiddleware': 543,
     'FAA.middlewares.departuremiddleware.DepartureDownloaderMiddleware': 543,
+    'FAA.middlewares.arrivalmiddleware.ArrivalDownloaderMiddleware': 544,
 }
 
 # Enable or disable extensions

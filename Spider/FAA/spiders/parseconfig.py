@@ -72,3 +72,73 @@ class Parsedeparture(object):
         self.readdays()
         self.readyears()
         return self.config
+
+class Parsearrival(object):
+    def __init__(self):
+        self.config = {}
+        self.cfg = configparser.ConfigParser()
+        self.cfg.read("./FAA/spiders/spiderconfig.ini", encoding="utf-8")
+        if 'Arrival' not in self.cfg.sections():
+            print('[!] Failed to find configuration of Arrival')
+            raise ValueError
+
+    def readstatistics(self):
+        if 'statistics' not in self.cfg['Arrival']:
+            print('[!] Read Config: Failed to find \'statistics\' in Arrival')
+            raise ValueError
+        self.config['statistics'] = self.cfg['Arrival']['statistics']
+        self.config['statistics'] = self.config['statistics'].split(',')
+        self.config['statistics'] = list(map(str.strip, self.config['statistics']))
+        self.config['statistics'] = list(map(str.capitalize, self.config['statistics']))
+
+    def readairports(self):
+        if 'origin_airports' not in self.cfg['Arrival']:
+            print('[!] Read Config: Failed to find \'origin_airports\' in Arrival')
+            raise ValueError
+        self.config['origin_airports'] = self.cfg['Arrival']['origin_airports']
+        self.config['origin_airports'] = self.config['origin_airports'].split(',')
+        self.config['origin_airports'] = list(map(str.strip, self.config['origin_airports']))
+        self.config['origin_airports'] = list(map(str.upper, self.config['origin_airports']))
+
+    def readairlines(self):
+        if 'airlines' not in self.cfg['Arrival']:
+            print('[!] Read Config: Failed to find \'airlines\' in Arrival')
+            raise ValueError
+        self.config['airlines'] = self.cfg['Arrival']['airlines']
+        self.config['airlines'] = self.config['airlines'].split(',')
+        self.config['airlines'] = list(map(str.strip, self.config['airlines']))
+        self.config['airlines'] = list(map(str.upper, self.config['airlines']))
+
+    def readmonths(self):
+        if 'months' not in self.cfg['Arrival']:
+            print('[!] Read Config: Failed to find \'months\' in Arrival')
+            raise ValueError
+        self.config['months'] = self.cfg['Arrival']['months']
+        self.config['months'] = self.config['months'].split(',')
+        self.config['months'] = list(map(str.strip, self.config['months']))
+        self.config['months'] = list(map(str.upper, self.config['months']))
+
+    def readdays(self):
+        if 'days' not in self.cfg['Arrival']:
+            print('[!] Read Config: Failed to find \'days\' in Arrival')
+            raise ValueError
+        self.config['days'] = self.cfg['Arrival']['days']
+        self.config['days'] = self.config['days'].split(',')
+        self.config['days'] = list(map(str.strip, self.config['days']))
+        self.config['days'] = list(map(str.upper, self.config['days']))
+
+    def readyears(self):
+        if 'years' not in self.cfg['Arrival']:
+            print('[!] Read Config: Failed to find \'years\' in Arrival')
+            raise ValueError
+        self.config['years'] = self.cfg['Arrival']['years']
+        self.config['years'] = self.config['years'].split(',')
+
+    def readall(self):
+        self.readstatistics()
+        self.readairports()
+        self.readairlines()
+        self.readmonths()
+        self.readdays()
+        self.readyears()
+        return self.config
