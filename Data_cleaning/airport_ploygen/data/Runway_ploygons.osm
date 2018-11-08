@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><osm version="0.6" generator="Eric">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2018-11-02T10:06:02Z"/>
+
+  <node id="14110001" lat="33.949379" lon="-118.430630"/>
+  <node id="14110002" lat="33.952253" lon="-118.402562"/>
+  <node id="14110003" lat="33.948976" lon="-118.430570"/>
+  <node id="14110004" lat="33.951848" lon="-118.402497"/>
+  
+  <node id="14110005" lat="33.947130" lon="-118.433735"/>
+  <node id="14110006" lat="33.950355" lon="-118.402281"/>
+  <node id="14110007" lat="33.946720" lon="-118.433663"/>
+  <node id="14110008" lat="33.949941" lon="-118.402216"/>
+  
+  <node id="14110009" lat="33.936103" lon="-118.418828"/>
+  <node id="14110010" lat="33.939711" lon="-118.383517"/>
+  <node id="14110011" lat="33.935690" lon="-118.418769"/>
+  <node id="14110012" lat="33.939305" lon="-118.383460"/>
+  
+  <node id="14110013" lat="33.933988" lon="-118.418513"/>
+  <node id="14110014" lat="33.937596" lon="-118.383346"/>
+  <node id="14110015" lat="33.933443" lon="-118.418424"/>
+  <node id="14110016" lat="33.937039" lon="-118.383252"/>
+
+
+  <way id="14115001">
+	<nd ref="14110001"/>
+    <nd ref="14110002"/>
+    <nd ref="14110004"/>
+    <nd ref="14110003"/>
+    <tag k="aeroway" v="runway"/>
+    <tag k="ref" v="06L/24R"/>
+  </way>
+  
+  <way id="14115002">
+	<nd ref="14110005"/>
+    <nd ref="14110006"/>
+    <nd ref="14110008"/>
+    <nd ref="14110007"/>
+    <tag k="aeroway" v="runway"/>
+    <tag k="ref" v="06R/24L"/>
+  </way>
+  
+  <way id="14115003">
+	<nd ref="14110009"/>
+    <nd ref="14110010"/>
+    <nd ref="14110012"/>
+    <nd ref="14110011"/>
+    <tag k="aeroway" v="runway"/>
+    <tag k="ref" v="07L/25R"/>
+  </way>
+  
+  <way id="14115004">
+	<nd ref="14110013"/>
+    <nd ref="14110014"/>
+    <nd ref="14110016"/>
+    <nd ref="14110015"/>
+    <tag k="aeroway" v="runway"/>
+    <tag k="ref" v="07R/25L"/>
+  </way>
+  
+</osm>
